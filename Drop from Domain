@@ -1,0 +1,2 @@
+Remove-Computer -ComputerName "computer" -UnjoinDomaincredential "domain\user" -LocalCredential "computer\Administrator" -PassThru -Verbose -Restart
+#Replaces strings as needed, removes computer from domain. Usually used to drop and readd a computer from the domain after the trust gets broken
