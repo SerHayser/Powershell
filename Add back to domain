@@ -1,0 +1,1 @@
+Add-Computer -ComputerName "computer" -LocalCredential "computer/user" -DomainName "domain" -Credential "domain/user" -Force -Verbose -Restart
