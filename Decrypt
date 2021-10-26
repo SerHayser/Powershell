@@ -1,0 +1,13 @@
+$user = (whoami).Substring(5)
+$directory = 'C:\Users\' + $user + '\Documents'
+
+ Get-ChildItem -Recurse -Path $directory | ForEach-Object {
+       #cipher.exe /d $_.FullName
+       if($_.GetType().FullName -eq 'System.IO.FileInfo') {
+            $_.Decrypt()
+       }
+       if($_.GetType().FullName -eq 'System.IO.DirectoryInfo') {
+            cipher.exe /d $_.FullName
+       }
+}
+#Replace Directory with whatever files are encrypted. This is handy for decrypting files for backing them up for the user.
