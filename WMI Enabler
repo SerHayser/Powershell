@@ -1,0 +1,2 @@
+netsh advfirewall firewall set rule group="windows management instrumentation (wmi)" new enable=yes
+#Be careful with this if any devices you run this on will be going onto unkown networks
